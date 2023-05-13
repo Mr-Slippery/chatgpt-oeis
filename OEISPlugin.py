@@ -21,7 +21,7 @@ class OEISPlugin:
 
     def process(self, message):
         # Check if the message contains a sequence of integers
-        sequence = [int(s) for s in message.split(',') if s.isdigit()]
+        sequence = [int(s) for s in message.split(',') if s.strip().isdigit()]
         print(sequence)
         if sequence:
             # If it does, query the OEIS
